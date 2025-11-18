@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>My Wallet</h2>
+      <p class="subtitle">Track your income & expenses</p>
+      <div class="card">
+        <div class="label">Total Balance</div>
+        <div class="bal">₹<span id="balance">0</span></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="type-row">
+        <button id="incomeBtn" class="type-btn active">Income</button>
+        <button id="expenseBtn" class="type-btn">Expense</button>
+      </div>
+
+      <input id="desc" type="text" placeholder="Title" />
+      <input id="amount" type="number" placeholder="Amount" />
+      <button id="addBtn" class="add-btn">Add Entry</button>
+
+      <h3 class="history-title">History</h3>
+      <div id="list" class="history-list"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+:root{
+  --bg1: #4e54c8;
+  --bg2: #8f94fb;
+  --card-bg: #ffffff;
+  --income: #3bb54a;
+  --expense: #e63946;
+  --muted: #6b6b6b;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg,var(--bg1),var(--bg2));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  padding:20px;
+}
+
+.container{
+  width:100%;
+  max-width:380px;
+  background:var(--card-bg);
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.18);
+  overflow:hidden;
+}
+
+.header{
+  padding:20px;
+  background:linear-gradient(180deg,var(--bg1),#5d63d8);
+  color:#fff;
+}
+
+.header h2{margin:0;font-size:20px}
+.subtitle{margin:6px 0 0;font-size:13px;opacity:0.9}
+.card{
+  background:#fff;color:#111;margin-top:14px;padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.08)
+}
+.card .label{font-size:12px;color:var(--muted)}
+.card .bal{font-size:22px;font-weight:700;margin-top:6px}
+
+.controls{padding:18px}
+.type-row{display:flex;gap:10px;margin-bottom:12px}
+.type-btn{
+  flex:1;padding:10px;border-radius:10px;border:none;font-weight:600;cursor:pointer;opacity:0.6;
+  transition:0.18s;
+}
+.type-btn.active{opacity:1;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+#incomeBtn{background:var(--income);color:#fff}
+#expenseBtn{background:var(--expense);color:#fff}
+
+input[type="text"], input[type="number"]{
+  width:100%;padding:10px;border-radius:10px;border:1px solid #e6e6e6;margin-bottom:10px;font-size:14px;
+}
+.add-btn{
+  width:100%;padding:10px;border-radius:10px;background:#4e54c8;color:#fff;border:none;font-weight:700;cursor:pointer;
+}
+
+.history-title{margin:16px 0 8px;font-size:14px;color:#333}
+.history-list{max-height:220px; overflow:auto;padding-right:6px}
+
+.expense-item{
+  background:#fafafa;padding:8px;border-radius:8px;margin-top:8px;display:flex;justify-content:space-between;align-items:center;
+  font-size:13px;
+}
+.expense-item .left{display:flex;flex-direction:column;gap:4px}
+.expense-item .title{font-weight:600}
+.expense-item .meta{font-size:12px;color:var(--muted)}
+.expense-item .amount{font-weight:700}
+
+.expense-item.income{border-left:4px solid var(--income)}
+.expense-item.expense{border-left:4px solid var(--expense)}
+
+.del-btn{background:#ff6b6b;border:none;padding:6px 8px;border-radius:8px;color:#fff;cursor:pointer}
