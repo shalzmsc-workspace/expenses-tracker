@@ -45,3 +45,11 @@ index.html
 style.css
 app.js
 README.md
+
+## 📸 Screenshots
+
+### Before
+![Before](./screenshots/before.png)
+
+### After
+![After](./screenshots/after.png)
